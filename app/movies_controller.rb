@@ -24,12 +24,10 @@ def can_be_created_with_a_hash_of_attributes
 end
 
 def can_be_created_in_a_block(args = {:title => "Home Alone", :release_date => 1990})
-  #Movie.create do |m|
-    #binding.pry
-    puts Movie.title = args[:title]
-    puts Movie.release_date = args[:release_date]
-    Movie.create
-  #end
+  Movie.create do |m|
+    m.title = args[:title]
+    m.release_date = args[:release_date]
+  end
 end
 
 # def parrot(phrase = "Squawk!")
